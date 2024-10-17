@@ -1,4 +1,4 @@
 package internal.api.backend.payload;
 
-public class FightDTO {
+public class FightResult {
 }
