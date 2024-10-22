@@ -19,6 +19,14 @@ public class NameUtils {
     private static final String FIRST_NAMES = "names/first_names.txt";
     private static final String LAST_NAMES = "names/last_names.txt";
 
+    public static String generateName(){
+        List<String> firstNames = readNames(FIRST_NAMES);
+        List<String> lastNames = readNames(LAST_NAMES);
+        String firstName = firstNames.get(random.nextInt(firstNames.size()));
+        String lastName = lastNames.get(random.nextInt(lastNames.size()));
+        return firstName + " " + lastName;
+    }
+
     public static List<String> generateNames(int nameCount){
         List<String> generatedNames = new ArrayList<>();
         List<String> firstNames = readNames(FIRST_NAMES);

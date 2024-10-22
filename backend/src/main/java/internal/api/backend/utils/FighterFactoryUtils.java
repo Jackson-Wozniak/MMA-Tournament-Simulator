@@ -2,7 +2,18 @@ package internal.api.backend.utils;
 
 import internal.api.backend.enums.FighterType;
 
+import java.util.Random;
+
 public class FighterFactoryUtils {
+
+    private static final Random random = new Random();
+
+    public static FighterType randomType(){
+        int rand = random.nextInt(10) + 1;
+        if(rand <= 6) return FighterType.MIXED_MARTIAL_ARTIST;
+        if(rand <= 8) return FighterType.STRIKER;
+        return FighterType.GRAPPLER;
+    }
 
     public static int randomStriking(FighterType type){
         //create a random distribution of grades 1-100

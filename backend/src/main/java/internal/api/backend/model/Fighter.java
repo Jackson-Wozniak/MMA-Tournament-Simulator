@@ -28,15 +28,15 @@ public class Fighter {
         return sum / 4;
     }
 
-    public Fighter grappler(String name){
+    public static Fighter grappler(String name){
         return new Fighter(name, FighterType.GRAPPLER);
     }
 
-    public Fighter striker(String name){
+    public static Fighter striker(String name){
         return new Fighter(name, FighterType.STRIKER);
     }
 
-    public Fighter mixedMartialArtist(String name){
+    public static Fighter mixedMartialArtist(String name){
         return new Fighter(name, FighterType.MIXED_MARTIAL_ARTIST);
     }
 }
